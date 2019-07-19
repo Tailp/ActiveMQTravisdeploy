@@ -16,8 +16,10 @@ import org.apache.activemq.ActiveMQConnectionFactory;
  */
 public class MessageSender
 {
-	private static String url;
-	private static String queueName;
+	private static String url = "tcp://localhost:61616";
+	private static String queueName = "MESSAGE_QUEUE";
+
+	public MessageSender(){}
 
 	public MessageSender(String url_ln,String queueName_ln) {
 		this.url = url_ln;

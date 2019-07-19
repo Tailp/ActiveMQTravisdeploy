@@ -6,7 +6,7 @@ import java.lang.Exception;
 public class main {
 
 	public static void main(String[] args) {
-		MessageSender msgsender = new MessageSender("tcp://localhost:61616","MESSAGE_QUEUE");
+		MessageSender msgsender = new MessageSender();
 		try {
 			msgsender.send("Hi Henry");
 		}

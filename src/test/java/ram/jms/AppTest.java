@@ -31,8 +31,9 @@ public class AppTest
     /**
      * Rigourous Test :-)
      */
-    public void testApp()
+    public void testConnection()
     {
-        assertTrue( true );
+        MessageSender msgsender = new MessageSender();
+        assertTrue(msgsender.testConnection());
     }
 }
