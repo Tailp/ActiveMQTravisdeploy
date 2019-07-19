@@ -1,8 +1,15 @@
 language: java
 
+before_install:
+- docker pull webcenter/activemq:5.14.3
+- docker run --net=host webcenter/activemq:5.14.3
+- docker ps -a
+
 # command to install dependencies
 install:
   - mvn install -U -DskipTests=true -Dmaven.javadoc.skip=true -B -V
 # command to run tests
 script:
   - mvn test -B
+
+
